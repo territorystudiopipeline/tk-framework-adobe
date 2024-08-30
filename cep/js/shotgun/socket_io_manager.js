@@ -427,7 +427,8 @@ sg_socket_io.SocketManager = new function() {
                 // The client is setting the context thumbnail path.
                 var context_thumbnail = JSON.parse(json_context_thumbnail);
                 sg_logging.debug("Setting context thumbnail from client: " + json_context_thumbnail);
-                sg_manager.UPDATE_CONTEXT_THUMBNAIL.emit(context_thumbnail);
+                //sg_manager.UPDATE_CONTEXT_THUMBNAIL.emit(context_thumbnail);
+                // REMOVED ABOVE LINE FOR SPEED UP IN LOAD TIME
             });
 
             socket.on("set_log_file_path", function(json_log_file_path) {
